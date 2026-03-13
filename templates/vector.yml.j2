@@ -1,0 +1,19 @@
+sources:
+  sample_file:
+    type: file
+    include:
+      - /home/mike/logs/*.log
+sinks:
+  to_clickhouse:
+    type: clickhouse
+    inputs:
+      - sample_file
+    endpoint: http://127.0.0.1:8123
+    database: logs
+    table: some_logs
+    auth:
+      strategy: basic
+      password: ""
+      user: default
+    skip_unknown_fields: true
+    compression: gzip
