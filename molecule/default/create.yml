@@ -1,0 +1,50 @@
+---
+- name: Create
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  no_log: "{{ molecule_no_log }}"
+  tasks:
+    - name: Create molecule instance(s)
+      docker_container:
+        name: "{{ item.name }}"
+        hostname: "{{ item.name }}"
+        image: "{{ item.image }}"
+        state: started
+        recreate: true
+        privileged: "{{ item.privileged | default(false) }}"
+        volumes: "{{ item.volumes | default(omit) }}"
+        command: "{{ item.command | default(omit) }}"
+        cgroupns_mode: "{{ item.cgroupns_mode | default('host') }}"
+        env: "{{ item.env | default(omit) }}"
+        networks: "{{ item.networks | default(omit) }}"
+        published_ports: "{{ item.published_ports | default(omit) }}"
+      register: server
+      with_items: "{{ molecule_yml.platforms }}"
+
+    - name: Populate instance config dict
+      set_fact:
+        instance_conf_dict: {
+          'instance': "{{ item.container.Name }}",
+          'address': "{{ item.container.NetworkSettings.Networks.bridge.IPAddress }}",
+          'user': "root",
+          'port': "22",
+          'identity_file': "{{ molecule_ephemeral_directory }}/ssh_key", }
+      with_items: "{{ server.results }}"
+      register: instance_config_dict
+      when: server.changed
+
+    - name: Convert instance config dict to a list
+      set_fact:
+        instance_conf: "{{ instance_config_dict.results | map(attribute='ansible_facts.instance_conf_dict') | list }}"
+      when: server.changed
+
+    - name: Dump instance config
+      copy:
+        content: |
+          # Molecule managed
+
+          {{ instance_conf | to_json | from_json | to_yaml }}
+        dest: "{{ molecule_instance_config }}"
+        mode: "0600"
+      when: server.changed

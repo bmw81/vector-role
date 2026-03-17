@@ -1,0 +1,22 @@
+---
+- name: Verify
+  hosts: all
+  become: true
+  gather_facts: true
+  tasks:
+    - name: Check if Vector is installed
+      command: vector --version
+      changed_when: false
+      register: vector_version
+      ignore_errors: true
+
+    - name: Display Vector version
+      debug:
+        msg: "Vector version: {{ vector_version.stdout | default('Not installed') }}"
+
+    - name: Assert Vector is installed
+      assert:
+        that:
+          - vector_version.rc == 0
+        fail_msg: "Vector is not installed"
+        success_msg: "Vector is installed successfully"

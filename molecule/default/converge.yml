@@ -1,0 +1,26 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+  gather_facts: true
+  tasks:
+    - name: Update apt cache (for Debian/Ubuntu)
+      apt:
+        update_cache: true
+        cache_valid_time: 3600
+      when: ansible_os_family == "Debian"
+
+    - name: Apply role under test
+      include_role:
+        name: vector_role
+      vars:
+        ansible_roles_path: "{{ playbook_dir }}/../.."
+
+    - name: Debug - Show vector service file
+      command: cat /etc/systemd/system/vector.service
+      register: service_file
+      changed_when: false
+
+    - name: Debug - Print service file
+      debug:
+        var: service_file.stdout_lines

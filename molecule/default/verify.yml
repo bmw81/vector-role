@@ -1,0 +1,86 @@
+---
+- name: Verify
+  hosts: all
+  become: true
+  gather_facts: true
+  tasks:
+    - name: Check if Vector is installed
+      command: vector --version
+      changed_when: false
+      register: vector_version
+      ignore_errors: true
+
+    - name: Display Vector version
+      debug:
+        msg: "Vector version: {{ vector_version.stdout | default('Not installed') }}"
+
+    - name: Assert Vector is installed
+      assert:
+        that:
+          - vector_version.rc == 0
+        fail_msg: "Vector is not installed"
+        success_msg: "Vector is installed successfully"
+
+    - name: Check if Vector config file exists
+      stat:
+        path: /etc/vector/vector.yml
+      register: vector_config
+
+    - name: Assert Vector config exists
+      assert:
+        that:
+          - vector_config.stat.exists
+        fail_msg: "Vector config file is missing"
+        success_msg: "Vector config file exists"
+
+    - name: Validate Vector configuration
+      command: vector validate --no-environment --config-yaml /etc/vector/vector.yml
+      changed_when: false
+      register: vector_validate
+      ignore_errors: true
+
+    - name: Assert Vector configuration is valid
+      assert:
+        that:
+          - vector_validate.rc == 0
+        fail_msg: "Vector configuration is invalid: {{ vector_validate.stderr }}"
+        success_msg: "Vector configuration is valid"
+
+    - name: Check Vector service status
+      systemd:
+        name: vector
+        state: started
+      register: vector_service
+
+    - name: Display service status
+      debug:
+        msg: 
+          - "Service active: {{ vector_service.status.ActiveState }}"
+          - "Service substate: {{ vector_service.status.SubState }}"
+          - "Service restarts: {{ vector_service.status.NRestarts }}"
+
+    - name: Assert Vector service is running
+      assert:
+        that:
+          - vector_service.status.ActiveState == "active"
+          - vector_service.status.SubState == "running"
+        fail_msg: "Vector service is not running"
+        success_msg: "Vector service is running successfully"
+
+    - name: Check Vector logs for successful start
+      command: journalctl -u vector --no-pager -n 20
+      changed_when: false
+      register: vector_logs
+
+    - name: Display recent Vector logs
+      debug:
+        msg: "{{ vector_logs.stdout_lines }}"
+
+    - name: Verify Vector started successfully
+      assert:
+        that:
+          - "'Vector has started' in vector_logs.stdout"
+          - "'Healthcheck disabled' in vector_logs.stdout"
+          - "'Starting file server' in vector_logs.stdout"
+        fail_msg: "Vector did not start properly"
+        success_msg: "Vector started successfully with healthcheck disabled"

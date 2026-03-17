@@ -1,0 +1,192 @@
+/usr/lib/python3/dist-packages/paramiko/pkey.py:82: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from cryptography.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  "cipher": algorithms.TripleDES,
+/usr/lib/python3/dist-packages/paramiko/transport.py:261: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from cryptography.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  "class": algorithms.TripleDES,
+
+PLAY [Verify] ******************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+[32mok: [ubuntu-20-04][0m
+
+TASK [Check if Vector is installed] ********************************************
+[32mok: [ubuntu-20-04][0m
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Display Vector version] **************************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": "Vector version: vector 0.53.0 (x86_64-unknown-linux-gnu 2b51b40 2026-01-27 21:46:39.386326724)"[0m
+[32m}[0m
+[32mok: [ubuntu-20-04] => {[0m
+[32m    "msg": "Vector version: vector 0.53.0 (x86_64-unknown-linux-gnu 2b51b40 2026-01-27 21:46:39.386326724)"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": "Vector version: vector 0.53.0 (x86_64-unknown-linux-gnu 2b51b40 2026-01-27 21:46:39.386326724)"[0m
+[32m}[0m
+
+TASK [Assert Vector is installed] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector is installed successfully"[0m
+[32m}[0m
+[32mok: [ubuntu-20-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector is installed successfully"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector is installed successfully"[0m
+[32m}[0m
+
+TASK [Check if Vector config file exists] **************************************
+[32mok: [ubuntu-20-04][0m
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Assert Vector config exists] *********************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector config file exists"[0m
+[32m}[0m
+[32mok: [ubuntu-20-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector config file exists"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector config file exists"[0m
+[32m}[0m
+
+TASK [Validate Vector configuration] *******************************************
+[32mok: [ubuntu-20-04][0m
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Assert Vector configuration is valid] ************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector configuration is valid"[0m
+[32m}[0m
+[32mok: [ubuntu-20-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector configuration is valid"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector configuration is valid"[0m
+[32m}[0m
+
+TASK [Check Vector service status] *********************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [ubuntu-20-04][0m
+[32mok: [centos-8][0m
+
+TASK [Display service status] **************************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": [[0m
+[32m        "Service active: active",[0m
+[32m        "Service substate: running",[0m
+[32m        "Service restarts: 0"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-20-04] => {[0m
+[32m    "msg": [[0m
+[32m        "Service active: active",[0m
+[32m        "Service substate: running",[0m
+[32m        "Service restarts: 0"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": [[0m
+[32m        "Service active: active",[0m
+[32m        "Service substate: running",[0m
+[32m        "Service restarts: 0"[0m
+[32m    ][0m
+[32m}[0m
+
+TASK [Check if service is at least trying to start] ****************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector service is in state: active/running"[0m
+[32m}[0m
+[32mok: [ubuntu-20-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector service is in state: active/running"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector service is in state: active/running"[0m
+[32m}[0m
+
+TASK [Check Vector logs for ClickHouse connection issues] **********************
+[32mok: [ubuntu-20-04][0m
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Display recent Vector logs] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": [[0m
+[32m        "-- Logs begin at Tue 2026-03-17 15:04:00 UTC, end at Tue 2026-03-17 15:15:41 UTC. --",[0m
+[32m        "Mar 17 15:07:57 centos-8 systemd[1]: Started Vector Service.",[0m
+[32m        "Mar 17 15:07:57 centos-8 vector[455]: 2026-03-17T15:07:57.678925Z  INFO vector::app: Log level is enabled. level=\"info\"",[0m
+[32m        "Mar 17 15:07:57 centos-8 vector[455]: 2026-03-17T15:07:57.680095Z  INFO vector::app: Loading configs. paths=[\"/etc/vector/vector.yml\"]",[0m
+[32m        "Mar 17 15:07:57 centos-8 vector[455]: 2026-03-17T15:07:57.707725Z  INFO vector::topology::running: Running healthchecks.",[0m
+[32m        "Mar 17 15:07:57 centos-8 vector[455]: 2026-03-17T15:07:57.707817Z  INFO vector: Vector has started. debug=\"false\" version=\"0.53.0\" arch=\"x86_64\" revision=\"2b51b40 2026-01-27 21:46:39.386326724\"",[0m
+[32m        "Mar 17 15:07:57 centos-8 vector[455]: 2026-03-17T15:07:57.707825Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.",[0m
+[32m        "Mar 17 15:07:57 centos-8 vector[455]: 2026-03-17T15:07:57.707884Z  INFO vector::topology::builder: Healthcheck disabled.",[0m
+[32m        "Mar 17 15:07:57 centos-8 vector[455]: 2026-03-17T15:07:57.707972Z  INFO source{component_kind=\"source\" component_id=sample_file component_type=file}: vector::sources::file: Starting file server. include=[\"/home/mike/logs/*.log\"] exclude=[]"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-20-04] => {[0m
+[32m    "msg": [[0m
+[32m        "-- Logs begin at Tue 2026-03-17 15:04:02 UTC, end at Tue 2026-03-17 15:15:41 UTC. --",[0m
+[32m        "Mar 17 15:07:57 ubuntu-20-04 systemd[1]: Started Vector Service.",[0m
+[32m        "Mar 17 15:07:57 ubuntu-20-04 vector[760]: 2026-03-17T15:07:57.728019Z  INFO vector::app: Log level is enabled. level=\"info\"",[0m
+[32m        "Mar 17 15:07:57 ubuntu-20-04 vector[760]: 2026-03-17T15:07:57.729567Z  INFO vector::app: Loading configs. paths=[\"/etc/vector/vector.yml\"]",[0m
+[32m        "Mar 17 15:07:57 ubuntu-20-04 vector[760]: 2026-03-17T15:07:57.760607Z  INFO vector::topology::running: Running healthchecks.",[0m
+[32m        "Mar 17 15:07:57 ubuntu-20-04 vector[760]: 2026-03-17T15:07:57.760714Z  INFO vector: Vector has started. debug=\"false\" version=\"0.53.0\" arch=\"x86_64\" revision=\"2b51b40 2026-01-27 21:46:39.386326724\"",[0m
+[32m        "Mar 17 15:07:57 ubuntu-20-04 vector[760]: 2026-03-17T15:07:57.760724Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.",[0m
+[32m        "Mar 17 15:07:57 ubuntu-20-04 vector[760]: 2026-03-17T15:07:57.760783Z  INFO vector::topology::builder: Healthcheck disabled.",[0m
+[32m        "Mar 17 15:07:57 ubuntu-20-04 vector[760]: 2026-03-17T15:07:57.760895Z  INFO source{component_kind=\"source\" component_id=sample_file component_type=file}: vector::sources::file: Starting file server. include=[\"/home/mike/logs/*.log\"] exclude=[]"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": [[0m
+[32m        "Mar 17 15:07:57 ubuntu-22-04 systemd[1]: Started Vector Service.",[0m
+[32m        "Mar 17 15:07:57 ubuntu-22-04 vector[734]: 2026-03-17T15:07:57.741970Z  INFO vector::app: Log level is enabled. level=\"info\"",[0m
+[32m        "Mar 17 15:07:57 ubuntu-22-04 vector[734]: 2026-03-17T15:07:57.743556Z  INFO vector::app: Loading configs. paths=[\"/etc/vector/vector.yml\"]",[0m
+[32m        "Mar 17 15:07:57 ubuntu-22-04 vector[734]: 2026-03-17T15:07:57.772290Z  INFO vector::topology::running: Running healthchecks.",[0m
+[32m        "Mar 17 15:07:57 ubuntu-22-04 vector[734]: 2026-03-17T15:07:57.772380Z  INFO vector: Vector has started. debug=\"false\" version=\"0.53.0\" arch=\"x86_64\" revision=\"2b51b40 2026-01-27 21:46:39.386326724\"",[0m
+[32m        "Mar 17 15:07:57 ubuntu-22-04 vector[734]: 2026-03-17T15:07:57.772389Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.",[0m
+[32m        "Mar 17 15:07:57 ubuntu-22-04 vector[734]: 2026-03-17T15:07:57.772508Z  INFO vector::topology::builder: Healthcheck disabled.",[0m
+[32m        "Mar 17 15:07:57 ubuntu-22-04 vector[734]: 2026-03-17T15:07:57.772681Z  INFO source{component_kind=\"source\" component_id=sample_file component_type=file}: vector::sources::file: Starting file server. include=[\"/home/mike/logs/*.log\"] exclude=[]"[0m
+[32m    ][0m
+[32m}[0m
+
+TASK [Verify that Vector is trying to connect to ClickHouse] *******************
+[31mfatal: [centos-8]: FAILED! => {[0m
+[31m    "assertion": "'to_clickhouse' in vector_logs.stdout",[0m
+[31m    "changed": false,[0m
+[31m    "evaluated_to": false,[0m
+[31m    "msg": "Vector is not attempting to connect to ClickHouse as configured"[0m
+[31m}[0m
+[31mfatal: [ubuntu-20-04]: FAILED! => {[0m
+[31m    "assertion": "'to_clickhouse' in vector_logs.stdout",[0m
+[31m    "changed": false,[0m
+[31m    "evaluated_to": false,[0m
+[31m    "msg": "Vector is not attempting to connect to ClickHouse as configured"[0m
+[31m}[0m
+[31mfatal: [ubuntu-22-04]: FAILED! => {[0m
+[31m    "assertion": "'to_clickhouse' in vector_logs.stdout",[0m
+[31m    "changed": false,[0m
+[31m    "evaluated_to": false,[0m
+[31m    "msg": "Vector is not attempting to connect to ClickHouse as configured"[0m
+[31m}[0m
+
+PLAY RECAP *********************************************************************
+[31mcentos-8[0m                   : [32mok=13  [0m changed=0    unreachable=0    [31mfailed=1   [0m skipped=0    rescued=0    ignored=0
+[31mubuntu-20-04[0m               : [32mok=13  [0m changed=0    unreachable=0    [31mfailed=1   [0m skipped=0    rescued=0    ignored=0
+[31mubuntu-22-04[0m               : [32mok=13  [0m changed=0    unreachable=0    [31mfailed=1   [0m skipped=0    rescued=0    ignored=0
+
