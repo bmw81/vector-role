@@ -1,0 +1,2243 @@
+py38-ansible29: skipped because could not find python interpreter with spec(s): py38
+py38-ansible29: SKIP ⚠ in 0.03 seconds
+py38-ansible210: skipped because could not find python interpreter with spec(s): py38
+py38-ansible210: SKIP ⚠ in 0.01 seconds
+py38-ansible30: skipped because could not find python interpreter with spec(s): py38
+py38-ansible30: SKIP ⚠ in 0.01 seconds
+py38-ansible40: skipped because could not find python interpreter with spec(s): py38
+py38-ansible40: SKIP ⚠ in 0.01 seconds
+py38-ansible50: skipped because could not find python interpreter with spec(s): py38
+py38-ansible50: SKIP ⚠ in 0.01 seconds
+py38-ansible60: skipped because could not find python interpreter with spec(s): py38
+py38-ansible60: SKIP ⚠ in 0.01 seconds
+py38-ansible70: skipped because could not find python interpreter with spec(s): py38
+py38-ansible70: SKIP ⚠ in 0.01 seconds
+py38-ansible80: skipped because could not find python interpreter with spec(s): py38
+py38-ansible80: SKIP ⚠ in 0.01 seconds
+py39-ansible29: skipped because could not find python interpreter with spec(s): py39
+py39-ansible29: SKIP ⚠ in 0.01 seconds
+py39-ansible210: skipped because could not find python interpreter with spec(s): py39
+py39-ansible210: SKIP ⚠ in 0.01 seconds
+py39-ansible30: skipped because could not find python interpreter with spec(s): py39
+py39-ansible30: SKIP ⚠ in 0.01 seconds
+py39-ansible40: skipped because could not find python interpreter with spec(s): py39
+py39-ansible40: SKIP ⚠ in 0.01 seconds
+py39-ansible50: skipped because could not find python interpreter with spec(s): py39
+py39-ansible50: SKIP ⚠ in 0.01 seconds
+py39-ansible60: skipped because could not find python interpreter with spec(s): py39
+py39-ansible60: SKIP ⚠ in 0.02 seconds
+py39-ansible70: skipped because could not find python interpreter with spec(s): py39
+py39-ansible70: SKIP ⚠ in 0.01 seconds
+py39-ansible80: skipped because could not find python interpreter with spec(s): py39
+py39-ansible80: SKIP ⚠ in 0.01 seconds
+py310-ansible29: commands[0]> molecule test -s podman_minimal
+ERROR! Unexpected Exception, this is probably a bug: cannot import name 'AnsibleCollectionLoader' from 'ansible.utils.collection_loader' (/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/ansible/utils/collection_loader/__init__.py)
+Traceback (most recent call last):
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/bin/molecule", line 6, in <module>
+    sys.exit(main())
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/click/core.py", line 1485, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/click/core.py", line 1406, in main
+    rv = self.invoke(ctx)
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/click/core.py", line 1873, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/click/core.py", line 1269, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/click/core.py", line 824, in invoke
+    return callback(*args, **kwargs)
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/molecule/click_cfg.py", line 613, in wrapper
+    return func(*args, **kwargs)
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/click/decorators.py", line 34, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/molecule/click_cfg.py", line 468, in wrapper
+    return func(ctx)
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/molecule/command/test.py", line 95, in test
+    base.execute_cmdline_scenarios(scenario_name, args, command_args, ansible_args, exclude)
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/molecule/command/base.py", line 215, in execute_cmdline_scenarios
+    configs.extend(get_configs(args, command_args, ansible_args, glob_str))
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/molecule/command/base.py", line 526, in get_configs
+    configs = [
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/molecule/command/base.py", line 527, in <listcomp>
+    config.Config(
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/molecule/config.py", line 133, in __init__
+    self.app = get_app(Path(self.project_directory))
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/molecule/app.py", line 107, in get_app
+    return App(path)
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/molecule/app.py", line 32, in __init__
+    self.runtime = Runtime(project_dir=path, isolated=False)
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/ansible_compat/runtime.py", line 244, in __init__
+    self.config = AnsibleConfig(cache_dir=self.cache_dir)
+  File "/home/mike/git-ansible/vector_role/.tox/py310-ansible29/lib/python3.10/site-packages/ansible_compat/config.py", line 601, in __init__
+    config_dump = subprocess.check_output(
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ansible-config', 'dump']' returned non-zero exit status 250.
+py310-ansible29: exit 1 (0.60 seconds) /home/mike/git-ansible/vector_role> molecule test -s podman_minimal pid=306997
+py310-ansible29: FAIL ✖ in 0.64 seconds
+py310-ansible210: commands[0]> molecule test -s podman_minimal
+[35mWARNING [0m Driver podman does not provide a schema.
+[31mERROR   [0m Driver 'docker' from state-file '/home/mike/.ansible/tmp/molecule.4_or.default/state.yml' is not available.
+py310-ansible210: exit 1 (0.94 seconds) /home/mike/git-ansible/vector_role> molecule test -s podman_minimal pid=307069
+py310-ansible210: FAIL ✖ in 0.95 seconds
+py310-ansible30: commands[0]> molecule test -s podman_minimal
+[35mWARNING [0m Driver podman does not provide a schema.
+[31mERROR   [0m Driver 'docker' from state-file '/home/mike/.ansible/tmp/molecule.4_or.default/state.yml' is not available.
+py310-ansible30: exit 1 (0.94 seconds) /home/mike/git-ansible/vector_role> molecule test -s podman_minimal pid=307127
+py310-ansible30: FAIL ✖ in 0.95 seconds
+py310-ansible40: install_deps> python -I -m pip install 'ansible<5.0,>=4.0' -r tox-requirements.txt
+[31mERROR: Could not install packages due to an OSError: [Errno 28] На устройстве не осталось свободного места
+
+Collecting ansible<5.0,>=4.0
+  Using cached ansible-4.10.0.tar.gz (36.8 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting selinux (from -r tox-requirements.txt (line 1))
+  Using cached selinux-0.3.0-py2.py3-none-any.whl.metadata (2.0 kB)
+Collecting lxml (from -r tox-requirements.txt (line 2))
+  Using cached lxml-6.0.2-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+Collecting molecule>=6.0.0 (from -r tox-requirements.txt (line 3))
+  Using cached molecule-26.3.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting molecule-podman>=2.0.0 (from -r tox-requirements.txt (line 4))
+  Using cached molecule_podman-2.0.3-py3-none-any.whl.metadata (4.5 kB)
+Collecting jmespath (from -r tox-requirements.txt (line 5))
+  Using cached jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting ansible-lint>=6.0.0 (from -r tox-requirements.txt (line 6))
+  Using cached ansible_lint-26.3.0-py3-none-any.whl.metadata (6.2 kB)
+Collecting yamllint>=1.28.0 (from -r tox-requirements.txt (line 7))
+  Using cached yamllint-1.38.0-py3-none-any.whl.metadata (4.2 kB)
+Collecting ansible-core~=2.11.7 (from ansible<5.0,>=4.0)
+  Using cached ansible-core-2.11.12.tar.gz (7.1 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting jinja2 (from ansible-core~=2.11.7->ansible<5.0,>=4.0)
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting PyYAML (from ansible-core~=2.11.7->ansible<5.0,>=4.0)
+  Using cached pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting cryptography (from ansible-core~=2.11.7->ansible<5.0,>=4.0)
+  Using cached cryptography-46.0.5-cp38-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+Collecting packaging (from ansible-core~=2.11.7->ansible<5.0,>=4.0)
+  Using cached packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting resolvelib<0.6.0,>=0.5.3 (from ansible-core~=2.11.7->ansible<5.0,>=4.0)
+  Using cached resolvelib-0.5.4-py2.py3-none-any.whl.metadata (3.7 kB)
+Collecting distro>=1.3.0 (from selinux->-r tox-requirements.txt (line 1))
+  Using cached distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting ansible-compat>=25.1.4 (from molecule>=6.0.0->-r tox-requirements.txt (line 3))
+  Using cached ansible_compat-25.12.1-py3-none-any.whl.metadata (3.4 kB)
+INFO: pip is looking at multiple versions of molecule to determine which version is compatible with other requirements. This could take a while.
+Collecting molecule>=6.0.0 (from -r tox-requirements.txt (line 3))
+  Using cached molecule-26.2.0-py3-none-any.whl.metadata (4.9 kB)
+  Using cached molecule-25.12.0-py3-none-any.whl.metadata (4.9 kB)
+  Using cached molecule-25.11.1-py3-none-any.whl.metadata (4.9 kB)
+  Using cached molecule-25.11.0-py3-none-any.whl.metadata (4.9 kB)
+  Using cached molecule-25.9.0-py3-none-any.whl.metadata (6.2 kB)
+  Using cached molecule-25.7.0-py3-none-any.whl.metadata (6.0 kB)
+  Using cached molecule-25.6.0-py3-none-any.whl.metadata (6.0 kB)
+INFO: pip is still looking at multiple versions of molecule to determine which version is compatible with other requirements. This could take a while.
+  Using cached molecule-25.5.0-py3-none-any.whl.metadata (5.9 kB)
+  Using cached molecule-25.4.0-py3-none-any.whl.metadata (5.9 kB)
+  Using cached molecule-25.3.1-py3-none-any.whl.metadata (5.9 kB)
+  Using cached molecule-25.3.0-py3-none-any.whl.metadata (6.0 kB)
+  Using cached molecule-25.2.0-py3-none-any.whl.metadata (6.0 kB)
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+  Using cached molecule-25.1.0-py3-none-any.whl.metadata (6.1 kB)
+  Using cached molecule-24.12.0-py3-none-any.whl.metadata (6.1 kB)
+  Using cached molecule-24.9.0-py3-none-any.whl.metadata (6.0 kB)
+  Using cached molecule-24.8.0-py3-none-any.whl.metadata (6.3 kB)
+  Using cached molecule-24.7.0-py3-none-any.whl.metadata (6.3 kB)
+  Using cached molecule-24.6.1-py3-none-any.whl.metadata (6.3 kB)
+  Using cached molecule-24.6.0-py3-none-any.whl.metadata (5.9 kB)
+  Using cached molecule-24.2.1-py3-none-any.whl.metadata (5.8 kB)
+  Using cached molecule-24.2.0-py3-none-any.whl.metadata (5.8 kB)
+  Using cached molecule-6.0.3-py3-none-any.whl.metadata (5.9 kB)
+  Using cached molecule-6.0.2-py3-none-any.whl.metadata (5.8 kB)
+  Using cached molecule-6.0.1-py3-none-any.whl.metadata (5.8 kB)
+  Using cached molecule-6.0.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting ansible<5.0,>=4.0
+  Using cached ansible-4.9.0.tar.gz (36.6 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+  Using cached ansible-4.8.0.tar.gz (36.1 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+  Using cached ansible-4.7.0.tar.gz (36.0 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+  Using cached ansible-4.6.0.tar.gz (35.6 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+  Using cached ansible-4.5.0.tar.gz (35.5 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+  Using cached ansible-4.4.0.tar.gz (35.4 MB)
+py310-ansible40: exit 1 (195.70 seconds) /home/mike/git-ansible/vector_role> python -I -m pip install 'ansible<5.0,>=4.0' -r tox-requirements.txt pid=307136
+py310-ansible40: FAIL ✖ in 3 minutes 15.71 seconds
+py310-ansible50: commands[0]> molecule test -s podman_minimal
+[31mWARNING [0m Driver podman does not provide a schema.
+[34mINFO    [0m podman_minimal scenario test matrix: dependency, cleanup, destroy, syntax, create, prepare, converge, idempotence, side_effect, verify, cleanup, destroy
+[34mINFO    [0m Performing prerun with [33mrole_name_check[0m=[1;36m0[0m[33m...[0m
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mdependency[0m
+[31mWARNING [0m Skipping, missing the requirements file.
+[31mWARNING [0m Skipping, missing the requirements file.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mcleanup[0m
+[31mWARNING [0m Skipping, cleanup playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mdestroy[0m
+[34mINFO    [0m Sanity checks: [32m'podman'[0m
+
+PLAY [Destroy] *****************************************************************
+
+TASK [Set async_dir for HOME env] **********************************************
+[32mok: [localhost][0m
+
+TASK [Destroy molecule instance(s)] ********************************************
+[33mchanged: [localhost] => (item={'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+[33mchanged: [localhost] => (item={'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+
+TASK [Wait for instance(s) deletion to complete] *******************************
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': '420081057567.310382', 'results_file': '/home/mike/.ansible_async/420081057567.310382', 'changed': True, 'item': {'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': '409277797599.310410', 'results_file': '/home/mike/.ansible_async/409277797599.310410', 'changed': True, 'item': {'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+
+PLAY RECAP *********************************************************************
+[33mlocalhost[0m                  : [32mok=3   [0m [33mchanged=2   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32msyntax[0m
+
+playbook: /home/mike/git-ansible/vector_role/molecule/default/converge.yml
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mcreate[0m
+
+PLAY [Create] ******************************************************************
+
+TASK [get podman executable path] **********************************************
+[32mok: [localhost][0m
+
+TASK [save path to executable as fact] *****************************************
+[32mok: [localhost][0m
+
+TASK [Set async_dir for HOME env] **********************************************
+[32mok: [localhost][0m
+
+TASK [Log into a container registry] *******************************************
+[36mskipping: [localhost] => (item="ubuntu-22-04 registry username: None specified") [0m
+[36mskipping: [localhost] => (item="centos-8 registry username: None specified") [0m
+
+TASK [Check presence of custom Dockerfiles] ************************************
+[32mok: [localhost] => (item=Dockerfile: None specified)[0m
+[32mok: [localhost] => (item=Dockerfile: None specified)[0m
+
+TASK [Create Dockerfiles from image names] *************************************
+[36mskipping: [localhost] => (item="Dockerfile: None specified; Image: docker.io/geerlingguy/docker-ubuntu2204-ansible:latest") [0m
+[36mskipping: [localhost] => (item="Dockerfile: None specified; Image: docker.io/geerlingguy/docker-centos8-ansible:latest") [0m
+
+TASK [Discover local Podman images] ********************************************
+[32mok: [localhost] => (item=ubuntu-22-04)[0m
+[32mok: [localhost] => (item=centos-8)[0m
+
+TASK [Build an Ansible compatible image] ***************************************
+[36mskipping: [localhost] => (item=docker.io/geerlingguy/docker-ubuntu2204-ansible:latest) [0m
+[36mskipping: [localhost] => (item=docker.io/geerlingguy/docker-centos8-ansible:latest) [0m
+
+TASK [Determine the CMD directives] ********************************************
+[32mok: [localhost] => (item="ubuntu-22-04 command: /lib/systemd/systemd")[0m
+[32mok: [localhost] => (item="centos-8 command: /usr/sbin/init")[0m
+
+TASK [Remove possible pre-existing containers] *********************************
+[33mchanged: [localhost][0m
+
+TASK [Discover local podman networks] ******************************************
+[36mskipping: [localhost] => (item=ubuntu-22-04: None specified) [0m
+[36mskipping: [localhost] => (item=centos-8: None specified) [0m
+
+TASK [Create podman network dedicated to this scenario] ************************
+[36mskipping: [localhost][0m
+
+TASK [Create molecule instance(s)] *********************************************
+[33mchanged: [localhost] => (item=ubuntu-22-04)[0m
+[33mchanged: [localhost] => (item=centos-8)[0m
+
+TASK [Wait for instance(s) creation to complete] *******************************
+[33mchanged: [localhost] => (item=ubuntu-22-04)[0m
+[33mchanged: [localhost] => (item=centos-8)[0m
+
+PLAY RECAP *********************************************************************
+[33mlocalhost[0m                  : [32mok=9   [0m [33mchanged=3   [0m unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
+
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mprepare[0m
+[31mWARNING [0m Skipping, prepare playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mconverge[0m
+
+PLAY [Converge] ****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Update apt cache (for Debian/Ubuntu)] ************************************
+[36mskipping: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [Apply role under test] ***************************************************
+
+TASK [vector_role : Fail if OS is not supported] *******************************
+[36mskipping: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for Debian/Ubuntu] *******************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for RedHat/CentOS] *******************************
+[36mskipping: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Debian/Ubuntu - Copy .deb package] *************************
+[36mskipping: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Download .rpm package] *********************
+[36mskipping: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Debian/Ubuntu - Install vector package with apt] ***********
+[36mskipping: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Install vector package with yum] ***********
+[36mskipping: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Vector | Template config] **********************************
+[33mchanged: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [vector_role : Vector | Create systemd unit] ******************************
+[33mchanged: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Vector | Start service] ************************************
+[33mchanged: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [Debug - Show vector service file] ****************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Debug - Print service file] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+
+PLAY RECAP *********************************************************************
+[33mcentos-8[0m                   : [32mok=9   [0m [33mchanged=5   [0m unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
+[33mubuntu-22-04[0m               : [32mok=10  [0m [33mchanged=6   [0m unreachable=0    failed=0    [36mskipped=4   [0m rescued=0    ignored=0
+
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32midempotence[0m
+
+PLAY [Converge] ****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Update apt cache (for Debian/Ubuntu)] ************************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Apply role under test] ***************************************************
+
+TASK [vector_role : Fail if OS is not supported] *******************************
+[36mskipping: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for Debian/Ubuntu] *******************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for RedHat/CentOS] *******************************
+[36mskipping: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Debian/Ubuntu - Copy .deb package] *************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Download .rpm package] *********************
+[36mskipping: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Debian/Ubuntu - Install vector package with apt] ***********
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Install vector package with yum] ***********
+[36mskipping: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Vector | Template config] **********************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Vector | Create systemd unit] ******************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Vector | Start service] ************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Debug - Show vector service file] ****************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Debug - Print service file] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+
+PLAY RECAP *********************************************************************
+[32mcentos-8[0m                   : [32mok=9   [0m changed=0    unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
+[32mubuntu-22-04[0m               : [32mok=10  [0m changed=0    unreachable=0    failed=0    [36mskipped=4   [0m rescued=0    ignored=0
+
+[34mINFO    [0m Idempotence completed successfully.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mside_effect[0m
+[31mWARNING [0m Skipping, side effect playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mverify[0m
+[34mINFO    [0m Running Ansible Verifier
+
+PLAY [Verify] ******************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Check if Vector is installed] ********************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Display Vector version] **************************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": "Vector version: vector 0.53.0 (x86_64-unknown-linux-gnu 2b51b40 2026-01-27 21:46:39.386326724)"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": "Vector version: vector 0.53.0 (x86_64-unknown-linux-gnu 2b51b40 2026-01-27 21:46:39.386326724)"[0m
+[32m}[0m
+
+TASK [Assert Vector is installed] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector is installed successfully"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector is installed successfully"[0m
+[32m}[0m
+
+TASK [Check if Vector config file exists] **************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Assert Vector config exists] *********************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector config file exists"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector config file exists"[0m
+[32m}[0m
+
+TASK [Validate Vector configuration] *******************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Assert Vector configuration is valid] ************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector configuration is valid"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector configuration is valid"[0m
+[32m}[0m
+
+TASK [Check Vector service status] *********************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Display service status] **************************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": [[0m
+[32m        "Service active: active",[0m
+[32m        "Service substate: running",[0m
+[32m        "Service restarts: 0"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": [[0m
+[32m        "Service active: active",[0m
+[32m        "Service substate: running",[0m
+[32m        "Service restarts: 0"[0m
+[32m    ][0m
+[32m}[0m
+
+TASK [Assert Vector service is running] ****************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector service is running successfully"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector service is running successfully"[0m
+[32m}[0m
+
+TASK [Check Vector logs for successful start] **********************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Display recent Vector logs] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": [[0m
+[32m        "-- Logs begin at Wed 2026-03-18 11:44:23 UTC, end at Wed 2026-03-18 11:50:58 UTC. --",[0m
+[32m        "Mar 18 11:50:12 centos-8 systemd[1]: Started Vector Service.",[0m
+[32m        "Mar 18 11:50:12 centos-8 vector[333]: 2026-03-18T11:50:12.813303Z  INFO vector::app: Log level is enabled. level=\"info\"",[0m
+[32m        "Mar 18 11:50:12 centos-8 vector[333]: 2026-03-18T11:50:12.814362Z  INFO vector::app: Loading configs. paths=[\"/etc/vector/vector.yml\"]",[0m
+[32m        "Mar 18 11:50:12 centos-8 vector[333]: 2026-03-18T11:50:12.853063Z  INFO vector::topology::running: Running healthchecks.",[0m
+[32m        "Mar 18 11:50:12 centos-8 vector[333]: 2026-03-18T11:50:12.853205Z  INFO vector: Vector has started. debug=\"false\" version=\"0.53.0\" arch=\"x86_64\" revision=\"2b51b40 2026-01-27 21:46:39.386326724\"",[0m
+[32m        "Mar 18 11:50:12 centos-8 vector[333]: 2026-03-18T11:50:12.853228Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.",[0m
+[32m        "Mar 18 11:50:12 centos-8 vector[333]: 2026-03-18T11:50:12.853255Z  INFO vector::topology::builder: Healthcheck disabled.",[0m
+[32m        "Mar 18 11:50:12 centos-8 vector[333]: 2026-03-18T11:50:12.853328Z  INFO source{component_kind=\"source\" component_id=sample_file component_type=file}: vector::sources::file: Starting file server. include=[\"/home/mike/logs/*.log\"] exclude=[]"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": [[0m
+[32m        "Mar 18 11:50:13 ubuntu-22-04 systemd[1]: Started Vector Service.",[0m
+[32m        "Mar 18 11:50:13 ubuntu-22-04 vector[632]: 2026-03-18T11:50:13.139629Z  INFO vector::app: Log level is enabled. level=\"info\"",[0m
+[32m        "Mar 18 11:50:13 ubuntu-22-04 vector[632]: 2026-03-18T11:50:13.140744Z  INFO vector::app: Loading configs. paths=[\"/etc/vector/vector.yml\"]",[0m
+[32m        "Mar 18 11:50:13 ubuntu-22-04 vector[632]: 2026-03-18T11:50:13.173481Z  INFO vector::topology::running: Running healthchecks.",[0m
+[32m        "Mar 18 11:50:13 ubuntu-22-04 vector[632]: 2026-03-18T11:50:13.173619Z  INFO vector: Vector has started. debug=\"false\" version=\"0.53.0\" arch=\"x86_64\" revision=\"2b51b40 2026-01-27 21:46:39.386326724\"",[0m
+[32m        "Mar 18 11:50:13 ubuntu-22-04 vector[632]: 2026-03-18T11:50:13.173635Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.",[0m
+[32m        "Mar 18 11:50:13 ubuntu-22-04 vector[632]: 2026-03-18T11:50:13.173646Z  INFO vector::topology::builder: Healthcheck disabled.",[0m
+[32m        "Mar 18 11:50:13 ubuntu-22-04 vector[632]: 2026-03-18T11:50:13.173727Z  INFO source{component_kind=\"source\" component_id=sample_file component_type=file}: vector::sources::file: Starting file server. include=[\"/home/mike/logs/*.log\"] exclude=[]"[0m
+[32m    ][0m
+[32m}[0m
+
+TASK [Verify Vector started successfully] **************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector started successfully with healthcheck disabled"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector started successfully with healthcheck disabled"[0m
+[32m}[0m
+
+PLAY RECAP *********************************************************************
+[32mcentos-8[0m                   : [32mok=14  [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+[32mubuntu-22-04[0m               : [32mok=14  [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[34mINFO    [0m Verifier completed successfully.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mcleanup[0m
+[31mWARNING [0m Skipping, cleanup playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mdestroy[0m
+
+PLAY [Destroy] *****************************************************************
+
+TASK [Set async_dir for HOME env] **********************************************
+[32mok: [localhost][0m
+
+TASK [Destroy molecule instance(s)] ********************************************
+[33mchanged: [localhost] => (item={'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+[33mchanged: [localhost] => (item={'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+
+TASK [Wait for instance(s) deletion to complete] *******************************
+[1;30mFAILED - RETRYING: [localhost]: Wait for instance(s) deletion to complete (300 retries left).[0m
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': '552492054750.347982', 'results_file': '/home/mike/.ansible_async/552492054750.347982', 'changed': True, 'item': {'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': '595402032613.348022', 'results_file': '/home/mike/.ansible_async/595402032613.348022', 'changed': True, 'item': {'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+
+PLAY RECAP *********************************************************************
+[33mlocalhost[0m                  : [32mok=3   [0m [33mchanged=2   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[34mINFO    [0m Pruning extra files from scenario ephemeral directory
+py310-ansible50: OK ✔ in 6 minutes 51.89 seconds
+py310-ansible60: commands[0]> molecule test -s podman_minimal
+[31mWARNING [0m Driver podman does not provide a schema.
+[34mINFO    [0m podman_minimal scenario test matrix: dependency, cleanup, destroy, syntax, create, prepare, converge, idempotence, side_effect, verify, cleanup, destroy
+[34mINFO    [0m Performing prerun with [33mrole_name_check[0m=[1;36m0[0m[33m...[0m
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mdependency[0m
+[31mWARNING [0m Skipping, missing the requirements file.
+[31mWARNING [0m Skipping, missing the requirements file.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mcleanup[0m
+[31mWARNING [0m Skipping, cleanup playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mdestroy[0m
+[34mINFO    [0m Sanity checks: [32m'podman'[0m
+
+PLAY [Destroy] *****************************************************************
+
+TASK [Set async_dir for HOME env] **********************************************
+[32mok: [localhost][0m
+
+TASK [Destroy molecule instance(s)] ********************************************
+[33mchanged: [localhost] => (item={'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+[33mchanged: [localhost] => (item={'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+
+TASK [Wait for instance(s) deletion to complete] *******************************
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': '28723052073.348655', 'results_file': '/home/mike/.ansible_async/28723052073.348655', 'changed': True, 'item': {'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': '304631958167.348683', 'results_file': '/home/mike/.ansible_async/304631958167.348683', 'changed': True, 'item': {'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+
+PLAY RECAP *********************************************************************
+[33mlocalhost[0m                  : [32mok=3   [0m [33mchanged=2   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32msyntax[0m
+
+playbook: /home/mike/git-ansible/vector_role/molecule/default/converge.yml
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mcreate[0m
+
+PLAY [Create] ******************************************************************
+
+TASK [get podman executable path] **********************************************
+[32mok: [localhost][0m
+
+TASK [save path to executable as fact] *****************************************
+[32mok: [localhost][0m
+
+TASK [Set async_dir for HOME env] **********************************************
+[32mok: [localhost][0m
+
+TASK [Log into a container registry] *******************************************
+[36mskipping: [localhost] => (item="ubuntu-22-04 registry username: None specified") [0m
+[36mskipping: [localhost] => (item="centos-8 registry username: None specified") [0m
+
+TASK [Check presence of custom Dockerfiles] ************************************
+[32mok: [localhost] => (item=Dockerfile: None specified)[0m
+[32mok: [localhost] => (item=Dockerfile: None specified)[0m
+
+TASK [Create Dockerfiles from image names] *************************************
+[36mskipping: [localhost] => (item="Dockerfile: None specified; Image: docker.io/geerlingguy/docker-ubuntu2204-ansible:latest") [0m
+[36mskipping: [localhost] => (item="Dockerfile: None specified; Image: docker.io/geerlingguy/docker-centos8-ansible:latest") [0m
+
+TASK [Discover local Podman images] ********************************************
+[32mok: [localhost] => (item=ubuntu-22-04)[0m
+[32mok: [localhost] => (item=centos-8)[0m
+
+TASK [Build an Ansible compatible image] ***************************************
+[36mskipping: [localhost] => (item=docker.io/geerlingguy/docker-ubuntu2204-ansible:latest) [0m
+[36mskipping: [localhost] => (item=docker.io/geerlingguy/docker-centos8-ansible:latest) [0m
+
+TASK [Determine the CMD directives] ********************************************
+[32mok: [localhost] => (item="ubuntu-22-04 command: /lib/systemd/systemd")[0m
+[32mok: [localhost] => (item="centos-8 command: /usr/sbin/init")[0m
+
+TASK [Remove possible pre-existing containers] *********************************
+[33mchanged: [localhost][0m
+
+TASK [Discover local podman networks] ******************************************
+[36mskipping: [localhost] => (item=ubuntu-22-04: None specified) [0m
+[36mskipping: [localhost] => (item=centos-8: None specified) [0m
+
+TASK [Create podman network dedicated to this scenario] ************************
+[36mskipping: [localhost][0m
+
+TASK [Create molecule instance(s)] *********************************************
+[33mchanged: [localhost] => (item=ubuntu-22-04)[0m
+[33mchanged: [localhost] => (item=centos-8)[0m
+
+TASK [Wait for instance(s) creation to complete] *******************************
+[33mchanged: [localhost] => (item=ubuntu-22-04)[0m
+[33mchanged: [localhost] => (item=centos-8)[0m
+
+PLAY RECAP *********************************************************************
+[33mlocalhost[0m                  : [32mok=9   [0m [33mchanged=3   [0m unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
+
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mprepare[0m
+[31mWARNING [0m Skipping, prepare playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mconverge[0m
+
+PLAY [Converge] ****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Update apt cache (for Debian/Ubuntu)] ************************************
+[36mskipping: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [Apply role under test] ***************************************************
+
+TASK [vector_role : Fail if OS is not supported] *******************************
+[36mskipping: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for Debian/Ubuntu] *******************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for RedHat/CentOS] *******************************
+[32mok: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Debian/Ubuntu - Copy .deb package] *************************
+[36mskipping: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Download .rpm package] *********************
+[36mskipping: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Debian/Ubuntu - Install vector package with apt] ***********
+[36mskipping: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Install vector package with yum] ***********
+[36mskipping: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Vector | Template config] **********************************
+[33mchanged: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Vector | Create systemd unit] ******************************
+[33mchanged: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Vector | Start service] ************************************
+[33mchanged: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [Debug - Show vector service file] ****************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Debug - Print service file] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+
+PLAY RECAP *********************************************************************
+[33mcentos-8[0m                   : [32mok=9   [0m [33mchanged=5   [0m unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
+[33mubuntu-22-04[0m               : [32mok=10  [0m [33mchanged=6   [0m unreachable=0    failed=0    [36mskipped=4   [0m rescued=0    ignored=0
+
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32midempotence[0m
+
+PLAY [Converge] ****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Update apt cache (for Debian/Ubuntu)] ************************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Apply role under test] ***************************************************
+
+TASK [vector_role : Fail if OS is not supported] *******************************
+[36mskipping: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for Debian/Ubuntu] *******************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for RedHat/CentOS] *******************************
+[32mok: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Debian/Ubuntu - Copy .deb package] *************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Download .rpm package] *********************
+[36mskipping: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Debian/Ubuntu - Install vector package with apt] ***********
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Install vector package with yum] ***********
+[36mskipping: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Vector | Template config] **********************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Vector | Create systemd unit] ******************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Vector | Start service] ************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Debug - Show vector service file] ****************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Debug - Print service file] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+
+PLAY RECAP *********************************************************************
+[32mcentos-8[0m                   : [32mok=9   [0m changed=0    unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
+[32mubuntu-22-04[0m               : [32mok=10  [0m changed=0    unreachable=0    failed=0    [36mskipped=4   [0m rescued=0    ignored=0
+
+[34mINFO    [0m Idempotence completed successfully.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mside_effect[0m
+[31mWARNING [0m Skipping, side effect playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mverify[0m
+[34mINFO    [0m Running Ansible Verifier
+
+PLAY [Verify] ******************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Check if Vector is installed] ********************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Display Vector version] **************************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": "Vector version: vector 0.53.0 (x86_64-unknown-linux-gnu 2b51b40 2026-01-27 21:46:39.386326724)"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": "Vector version: vector 0.53.0 (x86_64-unknown-linux-gnu 2b51b40 2026-01-27 21:46:39.386326724)"[0m
+[32m}[0m
+
+TASK [Assert Vector is installed] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector is installed successfully"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector is installed successfully"[0m
+[32m}[0m
+
+TASK [Check if Vector config file exists] **************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Assert Vector config exists] *********************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector config file exists"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector config file exists"[0m
+[32m}[0m
+
+TASK [Validate Vector configuration] *******************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Assert Vector configuration is valid] ************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector configuration is valid"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector configuration is valid"[0m
+[32m}[0m
+
+TASK [Check Vector service status] *********************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Display service status] **************************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": [[0m
+[32m        "Service active: active",[0m
+[32m        "Service substate: running",[0m
+[32m        "Service restarts: 0"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": [[0m
+[32m        "Service active: active",[0m
+[32m        "Service substate: running",[0m
+[32m        "Service restarts: 0"[0m
+[32m    ][0m
+[32m}[0m
+
+TASK [Assert Vector service is running] ****************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector service is running successfully"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector service is running successfully"[0m
+[32m}[0m
+
+TASK [Check Vector logs for successful start] **********************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Display recent Vector logs] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": [[0m
+[32m        "-- Logs begin at Wed 2026-03-18 11:51:15 UTC, end at Wed 2026-03-18 11:56:15 UTC. --",[0m
+[32m        "Mar 18 11:55:32 centos-8 systemd[1]: Started Vector Service.",[0m
+[32m        "Mar 18 11:55:32 centos-8 vector[326]: 2026-03-18T11:55:32.991248Z  INFO vector::app: Log level is enabled. level=\"info\"",[0m
+[32m        "Mar 18 11:55:32 centos-8 vector[326]: 2026-03-18T11:55:32.992443Z  INFO vector::app: Loading configs. paths=[\"/etc/vector/vector.yml\"]",[0m
+[32m        "Mar 18 11:55:33 centos-8 vector[326]: 2026-03-18T11:55:33.024151Z  INFO vector::topology::running: Running healthchecks.",[0m
+[32m        "Mar 18 11:55:33 centos-8 vector[326]: 2026-03-18T11:55:33.024285Z  INFO vector: Vector has started. debug=\"false\" version=\"0.53.0\" arch=\"x86_64\" revision=\"2b51b40 2026-01-27 21:46:39.386326724\"",[0m
+[32m        "Mar 18 11:55:33 centos-8 vector[326]: 2026-03-18T11:55:33.024301Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.",[0m
+[32m        "Mar 18 11:55:33 centos-8 vector[326]: 2026-03-18T11:55:33.024358Z  INFO vector::topology::builder: Healthcheck disabled.",[0m
+[32m        "Mar 18 11:55:33 centos-8 vector[326]: 2026-03-18T11:55:33.024411Z  INFO source{component_kind=\"source\" component_id=sample_file component_type=file}: vector::sources::file: Starting file server. include=[\"/home/mike/logs/*.log\"] exclude=[]"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": [[0m
+[32m        "Mar 18 11:55:33 ubuntu-22-04 systemd[1]: Started Vector Service.",[0m
+[32m        "Mar 18 11:55:33 ubuntu-22-04 vector[632]: 2026-03-18T11:55:33.065903Z  INFO vector::app: Log level is enabled. level=\"info\"",[0m
+[32m        "Mar 18 11:55:33 ubuntu-22-04 vector[632]: 2026-03-18T11:55:33.068191Z  INFO vector::app: Loading configs. paths=[\"/etc/vector/vector.yml\"]",[0m
+[32m        "Mar 18 11:55:33 ubuntu-22-04 vector[632]: 2026-03-18T11:55:33.105870Z  INFO vector::topology::running: Running healthchecks.",[0m
+[32m        "Mar 18 11:55:33 ubuntu-22-04 vector[632]: 2026-03-18T11:55:33.106009Z  INFO vector: Vector has started. debug=\"false\" version=\"0.53.0\" arch=\"x86_64\" revision=\"2b51b40 2026-01-27 21:46:39.386326724\"",[0m
+[32m        "Mar 18 11:55:33 ubuntu-22-04 vector[632]: 2026-03-18T11:55:33.106027Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.",[0m
+[32m        "Mar 18 11:55:33 ubuntu-22-04 vector[632]: 2026-03-18T11:55:33.106048Z  INFO vector::topology::builder: Healthcheck disabled.",[0m
+[32m        "Mar 18 11:55:33 ubuntu-22-04 vector[632]: 2026-03-18T11:55:33.106150Z  INFO source{component_kind=\"source\" component_id=sample_file component_type=file}: vector::sources::file: Starting file server. include=[\"/home/mike/logs/*.log\"] exclude=[]"[0m
+[32m    ][0m
+[32m}[0m
+
+TASK [Verify Vector started successfully] **************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector started successfully with healthcheck disabled"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector started successfully with healthcheck disabled"[0m
+[32m}[0m
+
+PLAY RECAP *********************************************************************
+[32mcentos-8[0m                   : [32mok=14  [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+[32mubuntu-22-04[0m               : [32mok=14  [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[34mINFO    [0m Verifier completed successfully.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mcleanup[0m
+[31mWARNING [0m Skipping, cleanup playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mdestroy[0m
+
+PLAY [Destroy] *****************************************************************
+
+TASK [Set async_dir for HOME env] **********************************************
+[32mok: [localhost][0m
+
+TASK [Destroy molecule instance(s)] ********************************************
+[33mchanged: [localhost] => (item={'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+[33mchanged: [localhost] => (item={'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+
+TASK [Wait for instance(s) deletion to complete] *******************************
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': '583762343269.384969', 'results_file': '/home/mike/.ansible_async/583762343269.384969', 'changed': True, 'item': {'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+[1;30mFAILED - RETRYING: [localhost]: Wait for instance(s) deletion to complete (300 retries left).[0m
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': '54108147728.385007', 'results_file': '/home/mike/.ansible_async/54108147728.385007', 'changed': True, 'item': {'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+
+PLAY RECAP *********************************************************************
+[33mlocalhost[0m                  : [32mok=3   [0m [33mchanged=2   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[34mINFO    [0m Pruning extra files from scenario ephemeral directory
+py310-ansible60: OK ✔ in 5 minutes 16.93 seconds
+py310-ansible70: commands[0]> molecule test -s podman_minimal
+[31mWARNING [0m Driver podman does not provide a schema.
+[34mINFO    [0m podman_minimal scenario test matrix: dependency, cleanup, destroy, syntax, create, prepare, converge, idempotence, side_effect, verify, cleanup, destroy
+[34mINFO    [0m Performing prerun with [33mrole_name_check[0m=[1;36m0[0m[33m...[0m
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mdependency[0m
+[31mWARNING [0m Skipping, missing the requirements file.
+[31mWARNING [0m Skipping, missing the requirements file.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mcleanup[0m
+[31mWARNING [0m Skipping, cleanup playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mdestroy[0m
+[34mINFO    [0m Sanity checks: [32m'podman'[0m
+
+PLAY [Destroy] *****************************************************************
+
+TASK [Set async_dir for HOME env] **********************************************
+[32mok: [localhost][0m
+
+TASK [Destroy molecule instance(s)] ********************************************
+[33mchanged: [localhost] => (item={'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+[33mchanged: [localhost] => (item={'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+
+TASK [Wait for instance(s) deletion to complete] *******************************
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': 'j835924720127.385571', 'results_file': '/home/mike/.ansible_async/j835924720127.385571', 'changed': True, 'item': {'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': 'j801807844410.385609', 'results_file': '/home/mike/.ansible_async/j801807844410.385609', 'changed': True, 'item': {'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+
+PLAY RECAP *********************************************************************
+[33mlocalhost[0m                  : [32mok=3   [0m [33mchanged=2   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32msyntax[0m
+
+playbook: /home/mike/git-ansible/vector_role/molecule/default/converge.yml
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mcreate[0m
+
+PLAY [Create] ******************************************************************
+
+TASK [get podman executable path] **********************************************
+[32mok: [localhost][0m
+
+TASK [save path to executable as fact] *****************************************
+[32mok: [localhost][0m
+
+TASK [Set async_dir for HOME env] **********************************************
+[32mok: [localhost][0m
+
+TASK [Log into a container registry] *******************************************
+[36mskipping: [localhost] => (item="ubuntu-22-04 registry username: None specified") [0m
+[36mskipping: [localhost] => (item="centos-8 registry username: None specified") [0m
+[36mskipping: [localhost][0m
+
+TASK [Check presence of custom Dockerfiles] ************************************
+[32mok: [localhost] => (item=Dockerfile: None specified)[0m
+[32mok: [localhost] => (item=Dockerfile: None specified)[0m
+
+TASK [Create Dockerfiles from image names] *************************************
+[36mskipping: [localhost] => (item="Dockerfile: None specified; Image: docker.io/geerlingguy/docker-ubuntu2204-ansible:latest") [0m
+[36mskipping: [localhost] => (item="Dockerfile: None specified; Image: docker.io/geerlingguy/docker-centos8-ansible:latest") [0m
+[36mskipping: [localhost][0m
+
+TASK [Discover local Podman images] ********************************************
+[32mok: [localhost] => (item=ubuntu-22-04)[0m
+[32mok: [localhost] => (item=centos-8)[0m
+
+TASK [Build an Ansible compatible image] ***************************************
+[36mskipping: [localhost] => (item=docker.io/geerlingguy/docker-ubuntu2204-ansible:latest) [0m
+[36mskipping: [localhost] => (item=docker.io/geerlingguy/docker-centos8-ansible:latest) [0m
+[36mskipping: [localhost][0m
+
+TASK [Determine the CMD directives] ********************************************
+[32mok: [localhost] => (item="ubuntu-22-04 command: /lib/systemd/systemd")[0m
+[32mok: [localhost] => (item="centos-8 command: /usr/sbin/init")[0m
+
+TASK [Remove possible pre-existing containers] *********************************
+[33mchanged: [localhost][0m
+
+TASK [Discover local podman networks] ******************************************
+[36mskipping: [localhost] => (item=ubuntu-22-04: None specified) [0m
+[36mskipping: [localhost] => (item=centos-8: None specified) [0m
+[36mskipping: [localhost][0m
+
+TASK [Create podman network dedicated to this scenario] ************************
+[36mskipping: [localhost][0m
+
+TASK [Create molecule instance(s)] *********************************************
+[33mchanged: [localhost] => (item=ubuntu-22-04)[0m
+[33mchanged: [localhost] => (item=centos-8)[0m
+
+TASK [Wait for instance(s) creation to complete] *******************************
+[33mchanged: [localhost] => (item=ubuntu-22-04)[0m
+[33mchanged: [localhost] => (item=centos-8)[0m
+
+PLAY RECAP *********************************************************************
+[33mlocalhost[0m                  : [32mok=9   [0m [33mchanged=3   [0m unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
+
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mprepare[0m
+[31mWARNING [0m Skipping, prepare playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mconverge[0m
+
+PLAY [Converge] ****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Update apt cache (for Debian/Ubuntu)] ************************************
+[36mskipping: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [Apply role under test] ***************************************************
+
+TASK [vector_role : Fail if OS is not supported] *******************************
+[36mskipping: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for Debian/Ubuntu] *******************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for RedHat/CentOS] *******************************
+[32mok: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Debian/Ubuntu - Copy .deb package] *************************
+[36mskipping: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Download .rpm package] *********************
+[36mskipping: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Debian/Ubuntu - Install vector package with apt] ***********
+[36mskipping: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Install vector package with yum] ***********
+[36mskipping: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Vector | Template config] **********************************
+[33mchanged: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Vector | Create systemd unit] ******************************
+[33mchanged: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Vector | Start service] ************************************
+[33mchanged: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [Debug - Show vector service file] ****************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Debug - Print service file] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+
+PLAY RECAP *********************************************************************
+[33mcentos-8[0m                   : [32mok=9   [0m [33mchanged=5   [0m unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
+[33mubuntu-22-04[0m               : [32mok=10  [0m [33mchanged=6   [0m unreachable=0    failed=0    [36mskipped=4   [0m rescued=0    ignored=0
+
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32midempotence[0m
+
+PLAY [Converge] ****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Update apt cache (for Debian/Ubuntu)] ************************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Apply role under test] ***************************************************
+
+TASK [vector_role : Fail if OS is not supported] *******************************
+[36mskipping: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for Debian/Ubuntu] *******************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for RedHat/CentOS] *******************************
+[32mok: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Debian/Ubuntu - Copy .deb package] *************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Download .rpm package] *********************
+[36mskipping: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Debian/Ubuntu - Install vector package with apt] ***********
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Install vector package with yum] ***********
+[36mskipping: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Vector | Template config] **********************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Vector | Create systemd unit] ******************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Vector | Start service] ************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Debug - Show vector service file] ****************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Debug - Print service file] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+
+PLAY RECAP *********************************************************************
+[32mcentos-8[0m                   : [32mok=9   [0m changed=0    unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
+[32mubuntu-22-04[0m               : [32mok=10  [0m changed=0    unreachable=0    failed=0    [36mskipped=4   [0m rescued=0    ignored=0
+
+[34mINFO    [0m Idempotence completed successfully.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mside_effect[0m
+[31mWARNING [0m Skipping, side effect playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mverify[0m
+[34mINFO    [0m Running Ansible Verifier
+
+PLAY [Verify] ******************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Check if Vector is installed] ********************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Display Vector version] **************************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": "Vector version: vector 0.53.0 (x86_64-unknown-linux-gnu 2b51b40 2026-01-27 21:46:39.386326724)"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": "Vector version: vector 0.53.0 (x86_64-unknown-linux-gnu 2b51b40 2026-01-27 21:46:39.386326724)"[0m
+[32m}[0m
+
+TASK [Assert Vector is installed] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector is installed successfully"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector is installed successfully"[0m
+[32m}[0m
+
+TASK [Check if Vector config file exists] **************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Assert Vector config exists] *********************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector config file exists"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector config file exists"[0m
+[32m}[0m
+
+TASK [Validate Vector configuration] *******************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Assert Vector configuration is valid] ************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector configuration is valid"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector configuration is valid"[0m
+[32m}[0m
+
+TASK [Check Vector service status] *********************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Display service status] **************************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": [[0m
+[32m        "Service active: active",[0m
+[32m        "Service substate: running",[0m
+[32m        "Service restarts: 0"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": [[0m
+[32m        "Service active: active",[0m
+[32m        "Service substate: running",[0m
+[32m        "Service restarts: 0"[0m
+[32m    ][0m
+[32m}[0m
+
+TASK [Assert Vector service is running] ****************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector service is running successfully"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector service is running successfully"[0m
+[32m}[0m
+
+TASK [Check Vector logs for successful start] **********************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Display recent Vector logs] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": [[0m
+[32m        "-- Logs begin at Wed 2026-03-18 11:56:33 UTC, end at Wed 2026-03-18 11:58:22 UTC. --",[0m
+[32m        "Mar 18 11:57:38 centos-8 systemd[1]: Started Vector Service.",[0m
+[32m        "Mar 18 11:57:38 centos-8 vector[314]: 2026-03-18T11:57:38.624511Z  INFO vector::app: Log level is enabled. level=\"info\"",[0m
+[32m        "Mar 18 11:57:38 centos-8 vector[314]: 2026-03-18T11:57:38.625634Z  INFO vector::app: Loading configs. paths=[\"/etc/vector/vector.yml\"]",[0m
+[32m        "Mar 18 11:57:38 centos-8 vector[314]: 2026-03-18T11:57:38.656310Z  INFO vector::topology::running: Running healthchecks.",[0m
+[32m        "Mar 18 11:57:38 centos-8 vector[314]: 2026-03-18T11:57:38.656455Z  INFO vector: Vector has started. debug=\"false\" version=\"0.53.0\" arch=\"x86_64\" revision=\"2b51b40 2026-01-27 21:46:39.386326724\"",[0m
+[32m        "Mar 18 11:57:38 centos-8 vector[314]: 2026-03-18T11:57:38.656473Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.",[0m
+[32m        "Mar 18 11:57:38 centos-8 vector[314]: 2026-03-18T11:57:38.656483Z  INFO vector::topology::builder: Healthcheck disabled.",[0m
+[32m        "Mar 18 11:57:38 centos-8 vector[314]: 2026-03-18T11:57:38.656573Z  INFO source{component_kind=\"source\" component_id=sample_file component_type=file}: vector::sources::file: Starting file server. include=[\"/home/mike/logs/*.log\"] exclude=[]"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": [[0m
+[32m        "Mar 18 11:57:38 ubuntu-22-04 systemd[1]: Started Vector Service.",[0m
+[32m        "Mar 18 11:57:38 ubuntu-22-04 vector[632]: 2026-03-18T11:57:38.682251Z  INFO vector::app: Log level is enabled. level=\"info\"",[0m
+[32m        "Mar 18 11:57:38 ubuntu-22-04 vector[632]: 2026-03-18T11:57:38.684093Z  INFO vector::app: Loading configs. paths=[\"/etc/vector/vector.yml\"]",[0m
+[32m        "Mar 18 11:57:38 ubuntu-22-04 vector[632]: 2026-03-18T11:57:38.729832Z  INFO vector::topology::running: Running healthchecks.",[0m
+[32m        "Mar 18 11:57:38 ubuntu-22-04 vector[632]: 2026-03-18T11:57:38.729964Z  INFO vector: Vector has started. debug=\"false\" version=\"0.53.0\" arch=\"x86_64\" revision=\"2b51b40 2026-01-27 21:46:39.386326724\"",[0m
+[32m        "Mar 18 11:57:38 ubuntu-22-04 vector[632]: 2026-03-18T11:57:38.729964Z  INFO vector::topology::builder: Healthcheck disabled.",[0m
+[32m        "Mar 18 11:57:38 ubuntu-22-04 vector[632]: 2026-03-18T11:57:38.729980Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.",[0m
+[32m        "Mar 18 11:57:38 ubuntu-22-04 vector[632]: 2026-03-18T11:57:38.730131Z  INFO source{component_kind=\"source\" component_id=sample_file component_type=file}: vector::sources::file: Starting file server. include=[\"/home/mike/logs/*.log\"] exclude=[]"[0m
+[32m    ][0m
+[32m}[0m
+
+TASK [Verify Vector started successfully] **************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector started successfully with healthcheck disabled"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector started successfully with healthcheck disabled"[0m
+[32m}[0m
+
+PLAY RECAP *********************************************************************
+[32mcentos-8[0m                   : [32mok=14  [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+[32mubuntu-22-04[0m               : [32mok=14  [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[34mINFO    [0m Verifier completed successfully.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mcleanup[0m
+[31mWARNING [0m Skipping, cleanup playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mdestroy[0m
+
+PLAY [Destroy] *****************************************************************
+
+TASK [Set async_dir for HOME env] **********************************************
+[32mok: [localhost][0m
+
+TASK [Destroy molecule instance(s)] ********************************************
+[33mchanged: [localhost] => (item={'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+[33mchanged: [localhost] => (item={'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+
+TASK [Wait for instance(s) deletion to complete] *******************************
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': 'j275817570156.418843', 'results_file': '/home/mike/.ansible_async/j275817570156.418843', 'changed': True, 'item': {'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+[1;30mFAILED - RETRYING: [localhost]: Wait for instance(s) deletion to complete (300 retries left).[0m
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': 'j275672155028.418882', 'results_file': '/home/mike/.ansible_async/j275672155028.418882', 'changed': True, 'item': {'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+
+PLAY RECAP *********************************************************************
+[33mlocalhost[0m                  : [32mok=3   [0m [33mchanged=2   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[34mINFO    [0m Pruning extra files from scenario ephemeral directory
+py310-ansible70: OK ✔ in 2 minutes 7.4 seconds
+py310-ansible80: commands[0]> molecule test -s podman_minimal
+[31mWARNING [0m Driver podman does not provide a schema.
+[34mINFO    [0m podman_minimal scenario test matrix: dependency, cleanup, destroy, syntax, create, prepare, converge, idempotence, side_effect, verify, cleanup, destroy
+[34mINFO    [0m Performing prerun with [33mrole_name_check[0m=[1;36m0[0m[33m...[0m
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mdependency[0m
+[31mWARNING [0m Skipping, missing the requirements file.
+[31mWARNING [0m Skipping, missing the requirements file.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mcleanup[0m
+[31mWARNING [0m Skipping, cleanup playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mdestroy[0m
+[34mINFO    [0m Sanity checks: [32m'podman'[0m
+
+PLAY [Destroy] *****************************************************************
+
+TASK [Set async_dir for HOME env] **********************************************
+[32mok: [localhost][0m
+
+TASK [Destroy molecule instance(s)] ********************************************
+[33mchanged: [localhost] => (item={'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+[33mchanged: [localhost] => (item={'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+
+TASK [Wait for instance(s) deletion to complete] *******************************
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': 'j489755433395.419463', 'results_file': '/home/mike/.ansible_async/j489755433395.419463', 'changed': True, 'item': {'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': 'j333814698166.419489', 'results_file': '/home/mike/.ansible_async/j333814698166.419489', 'changed': True, 'item': {'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+
+PLAY RECAP *********************************************************************
+[33mlocalhost[0m                  : [32mok=3   [0m [33mchanged=2   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32msyntax[0m
+
+playbook: /home/mike/git-ansible/vector_role/molecule/default/converge.yml
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mcreate[0m
+
+PLAY [Create] ******************************************************************
+
+TASK [get podman executable path] **********************************************
+[32mok: [localhost][0m
+
+TASK [save path to executable as fact] *****************************************
+[32mok: [localhost][0m
+
+TASK [Set async_dir for HOME env] **********************************************
+[32mok: [localhost][0m
+
+TASK [Log into a container registry] *******************************************
+[36mskipping: [localhost] => (item="ubuntu-22-04 registry username: None specified") [0m
+[36mskipping: [localhost] => (item="centos-8 registry username: None specified") [0m
+[36mskipping: [localhost][0m
+
+TASK [Check presence of custom Dockerfiles] ************************************
+[32mok: [localhost] => (item=Dockerfile: None specified)[0m
+[32mok: [localhost] => (item=Dockerfile: None specified)[0m
+
+TASK [Create Dockerfiles from image names] *************************************
+[36mskipping: [localhost] => (item="Dockerfile: None specified; Image: docker.io/geerlingguy/docker-ubuntu2204-ansible:latest") [0m
+[36mskipping: [localhost] => (item="Dockerfile: None specified; Image: docker.io/geerlingguy/docker-centos8-ansible:latest") [0m
+[36mskipping: [localhost][0m
+
+TASK [Discover local Podman images] ********************************************
+[32mok: [localhost] => (item=ubuntu-22-04)[0m
+[32mok: [localhost] => (item=centos-8)[0m
+
+TASK [Build an Ansible compatible image] ***************************************
+[36mskipping: [localhost] => (item=docker.io/geerlingguy/docker-ubuntu2204-ansible:latest) [0m
+[36mskipping: [localhost] => (item=docker.io/geerlingguy/docker-centos8-ansible:latest) [0m
+[36mskipping: [localhost][0m
+
+TASK [Determine the CMD directives] ********************************************
+[32mok: [localhost] => (item="ubuntu-22-04 command: /lib/systemd/systemd")[0m
+[32mok: [localhost] => (item="centos-8 command: /usr/sbin/init")[0m
+
+TASK [Remove possible pre-existing containers] *********************************
+[33mchanged: [localhost][0m
+
+TASK [Discover local podman networks] ******************************************
+[36mskipping: [localhost] => (item=ubuntu-22-04: None specified) [0m
+[36mskipping: [localhost] => (item=centos-8: None specified) [0m
+[36mskipping: [localhost][0m
+
+TASK [Create podman network dedicated to this scenario] ************************
+[36mskipping: [localhost][0m
+
+TASK [Create molecule instance(s)] *********************************************
+[33mchanged: [localhost] => (item=ubuntu-22-04)[0m
+[33mchanged: [localhost] => (item=centos-8)[0m
+
+TASK [Wait for instance(s) creation to complete] *******************************
+[33mchanged: [localhost] => (item=ubuntu-22-04)[0m
+[33mchanged: [localhost] => (item=centos-8)[0m
+
+PLAY RECAP *********************************************************************
+[33mlocalhost[0m                  : [32mok=9   [0m [33mchanged=3   [0m unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
+
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mprepare[0m
+[31mWARNING [0m Skipping, prepare playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mconverge[0m
+
+PLAY [Converge] ****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Update apt cache (for Debian/Ubuntu)] ************************************
+[36mskipping: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [Apply role under test] ***************************************************
+
+TASK [vector_role : Fail if OS is not supported] *******************************
+[36mskipping: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for Debian/Ubuntu] *******************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for RedHat/CentOS] *******************************
+[32mok: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Debian/Ubuntu - Copy .deb package] *************************
+[36mskipping: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Download .rpm package] *********************
+[36mskipping: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Debian/Ubuntu - Install vector package with apt] ***********
+[36mskipping: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Install vector package with yum] ***********
+[36mskipping: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Vector | Template config] **********************************
+[33mchanged: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [vector_role : Vector | Create systemd unit] ******************************
+[33mchanged: [centos-8][0m
+[33mchanged: [ubuntu-22-04][0m
+
+TASK [vector_role : Vector | Start service] ************************************
+[33mchanged: [ubuntu-22-04][0m
+[33mchanged: [centos-8][0m
+
+TASK [Debug - Show vector service file] ****************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Debug - Print service file] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+
+PLAY RECAP *********************************************************************
+[33mcentos-8[0m                   : [32mok=9   [0m [33mchanged=5   [0m unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
+[33mubuntu-22-04[0m               : [32mok=10  [0m [33mchanged=6   [0m unreachable=0    failed=0    [36mskipped=4   [0m rescued=0    ignored=0
+
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32midempotence[0m
+
+PLAY [Converge] ****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Update apt cache (for Debian/Ubuntu)] ************************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Apply role under test] ***************************************************
+
+TASK [vector_role : Fail if OS is not supported] *******************************
+[36mskipping: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for Debian/Ubuntu] *******************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Set facts for RedHat/CentOS] *******************************
+[32mok: [centos-8][0m
+[36mskipping: [ubuntu-22-04][0m
+
+TASK [vector_role : Debian/Ubuntu - Copy .deb package] *************************
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Download .rpm package] *********************
+[36mskipping: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Debian/Ubuntu - Install vector package with apt] ***********
+[36mskipping: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : RedHat/CentOS - Install vector package with yum] ***********
+[36mskipping: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Vector | Template config] **********************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [vector_role : Vector | Create systemd unit] ******************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [vector_role : Vector | Start service] ************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Debug - Show vector service file] ****************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Debug - Print service file] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "service_file.stdout_lines": [[0m
+[32m        "[Unit]",[0m
+[32m        "Description=Vector Service",[0m
+[32m        "After=network.target",[0m
+[32m        "Wants=network.target",[0m
+[32m        "",[0m
+[32m        "[Service]",[0m
+[32m        "Type=simple",[0m
+[32m        "User=root",[0m
+[32m        "Group=root",[0m
+[32m        "ExecStart=/usr/bin/vector --config-yaml /etc/vector/vector.yml",[0m
+[32m        "Restart=always",[0m
+[32m        "RestartSec=10",[0m
+[32m        "AmbientCapabilities=CAP_NET_BIND_SERVICE",[0m
+[32m        "Environment=VECTOR_REQUIRE_HEALTHY=false",[0m
+[32m        "",[0m
+[32m        "# Security settings",[0m
+[32m        "NoNewPrivileges=yes",[0m
+[32m        "PrivateTmp=yes",[0m
+[32m        "PrivateDevices=yes",[0m
+[32m        "ProtectSystem=full",[0m
+[32m        "ProtectHome=yes",[0m
+[32m        "ReadWritePaths=/var/lib/vector",[0m
+[32m        "",[0m
+[32m        "[Install]",[0m
+[32m        "WantedBy=multi-user.target"[0m
+[32m    ][0m
+[32m}[0m
+
+PLAY RECAP *********************************************************************
+[32mcentos-8[0m                   : [32mok=9   [0m changed=0    unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
+[32mubuntu-22-04[0m               : [32mok=10  [0m changed=0    unreachable=0    failed=0    [36mskipped=4   [0m rescued=0    ignored=0
+
+[34mINFO    [0m Idempotence completed successfully.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mside_effect[0m
+[31mWARNING [0m Skipping, side effect playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mverify[0m
+[34mINFO    [0m Running Ansible Verifier
+
+PLAY [Verify] ******************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Check if Vector is installed] ********************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Display Vector version] **************************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": "Vector version: vector 0.53.0 (x86_64-unknown-linux-gnu 2b51b40 2026-01-27 21:46:39.386326724)"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": "Vector version: vector 0.53.0 (x86_64-unknown-linux-gnu 2b51b40 2026-01-27 21:46:39.386326724)"[0m
+[32m}[0m
+
+TASK [Assert Vector is installed] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector is installed successfully"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector is installed successfully"[0m
+[32m}[0m
+
+TASK [Check if Vector config file exists] **************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Assert Vector config exists] *********************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector config file exists"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector config file exists"[0m
+[32m}[0m
+
+TASK [Validate Vector configuration] *******************************************
+[32mok: [ubuntu-22-04][0m
+[32mok: [centos-8][0m
+
+TASK [Assert Vector configuration is valid] ************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector configuration is valid"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector configuration is valid"[0m
+[32m}[0m
+
+TASK [Check Vector service status] *********************************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Display service status] **************************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": [[0m
+[32m        "Service active: active",[0m
+[32m        "Service substate: running",[0m
+[32m        "Service restarts: 0"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": [[0m
+[32m        "Service active: active",[0m
+[32m        "Service substate: running",[0m
+[32m        "Service restarts: 0"[0m
+[32m    ][0m
+[32m}[0m
+
+TASK [Assert Vector service is running] ****************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector service is running successfully"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector service is running successfully"[0m
+[32m}[0m
+
+TASK [Check Vector logs for successful start] **********************************
+[32mok: [centos-8][0m
+[32mok: [ubuntu-22-04][0m
+
+TASK [Display recent Vector logs] **********************************************
+[32mok: [centos-8] => {[0m
+[32m    "msg": [[0m
+[32m        "-- Logs begin at Wed 2026-03-18 11:58:40 UTC, end at Wed 2026-03-18 12:03:38 UTC. --",[0m
+[32m        "Mar 18 12:02:55 centos-8 systemd[1]: Started Vector Service.",[0m
+[32m        "Mar 18 12:02:55 centos-8 vector[326]: 2026-03-18T12:02:55.986334Z  INFO vector::app: Log level is enabled. level=\"info\"",[0m
+[32m        "Mar 18 12:02:55 centos-8 vector[326]: 2026-03-18T12:02:55.987530Z  INFO vector::app: Loading configs. paths=[\"/etc/vector/vector.yml\"]",[0m
+[32m        "Mar 18 12:02:56 centos-8 vector[326]: 2026-03-18T12:02:56.017762Z  INFO vector::topology::running: Running healthchecks.",[0m
+[32m        "Mar 18 12:02:56 centos-8 vector[326]: 2026-03-18T12:02:56.017897Z  INFO vector: Vector has started. debug=\"false\" version=\"0.53.0\" arch=\"x86_64\" revision=\"2b51b40 2026-01-27 21:46:39.386326724\"",[0m
+[32m        "Mar 18 12:02:56 centos-8 vector[326]: 2026-03-18T12:02:56.017915Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.",[0m
+[32m        "Mar 18 12:02:56 centos-8 vector[326]: 2026-03-18T12:02:56.017971Z  INFO vector::topology::builder: Healthcheck disabled.",[0m
+[32m        "Mar 18 12:02:56 centos-8 vector[326]: 2026-03-18T12:02:56.018101Z  INFO source{component_kind=\"source\" component_id=sample_file component_type=file}: vector::sources::file: Starting file server. include=[\"/home/mike/logs/*.log\"] exclude=[]"[0m
+[32m    ][0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "msg": [[0m
+[32m        "Mar 18 12:02:56 ubuntu-22-04 systemd[1]: Started Vector Service.",[0m
+[32m        "Mar 18 12:02:56 ubuntu-22-04 vector[634]: 2026-03-18T12:02:56.058020Z  INFO vector::app: Log level is enabled. level=\"info\"",[0m
+[32m        "Mar 18 12:02:56 ubuntu-22-04 vector[634]: 2026-03-18T12:02:56.059079Z  INFO vector::app: Loading configs. paths=[\"/etc/vector/vector.yml\"]",[0m
+[32m        "Mar 18 12:02:56 ubuntu-22-04 vector[634]: 2026-03-18T12:02:56.092682Z  INFO vector::topology::running: Running healthchecks.",[0m
+[32m        "Mar 18 12:02:56 ubuntu-22-04 vector[634]: 2026-03-18T12:02:56.092804Z  INFO vector: Vector has started. debug=\"false\" version=\"0.53.0\" arch=\"x86_64\" revision=\"2b51b40 2026-01-27 21:46:39.386326724\"",[0m
+[32m        "Mar 18 12:02:56 ubuntu-22-04 vector[634]: 2026-03-18T12:02:56.092822Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.",[0m
+[32m        "Mar 18 12:02:56 ubuntu-22-04 vector[634]: 2026-03-18T12:02:56.092848Z  INFO vector::topology::builder: Healthcheck disabled.",[0m
+[32m        "Mar 18 12:02:56 ubuntu-22-04 vector[634]: 2026-03-18T12:02:56.092922Z  INFO source{component_kind=\"source\" component_id=sample_file component_type=file}: vector::sources::file: Starting file server. include=[\"/home/mike/logs/*.log\"] exclude=[]"[0m
+[32m    ][0m
+[32m}[0m
+
+TASK [Verify Vector started successfully] **************************************
+[32mok: [centos-8] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector started successfully with healthcheck disabled"[0m
+[32m}[0m
+[32mok: [ubuntu-22-04] => {[0m
+[32m    "changed": false,[0m
+[32m    "msg": "Vector started successfully with healthcheck disabled"[0m
+[32m}[0m
+
+PLAY RECAP *********************************************************************
+[32mcentos-8[0m                   : [32mok=14  [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+[32mubuntu-22-04[0m               : [32mok=14  [0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[34mINFO    [0m Verifier completed successfully.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mcleanup[0m
+[31mWARNING [0m Skipping, cleanup playbook not configured.
+[34mINFO    [0m [2;36mRunning [0m[2;32mpodman_minimal[0m[2;36m > [0m[2;32mdestroy[0m
+
+PLAY [Destroy] *****************************************************************
+
+TASK [Set async_dir for HOME env] **********************************************
+[32mok: [localhost][0m
+
+TASK [Destroy molecule instance(s)] ********************************************
+[33mchanged: [localhost] => (item={'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+[33mchanged: [localhost] => (item={'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']})[0m
+
+TASK [Wait for instance(s) deletion to complete] *******************************
+[1;30mFAILED - RETRYING: [localhost]: Wait for instance(s) deletion to complete (300 retries left).[0m
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': 'j573791449381.455741', 'results_file': '/home/mike/.ansible_async/j573791449381.455741', 'changed': True, 'item': {'command': '/lib/systemd/systemd', 'image': 'docker.io/geerlingguy/docker-ubuntu2204-ansible:latest', 'name': 'ubuntu-22-04', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': 'j816190251922.455769', 'results_file': '/home/mike/.ansible_async/j816190251922.455769', 'changed': True, 'item': {'command': '/usr/sbin/init', 'image': 'docker.io/geerlingguy/docker-centos8-ansible:latest', 'name': 'centos-8', 'pre_build_image': True, 'privileged': True, 'volumes': ['/sys/fs/cgroup:/sys/fs/cgroup:rw']}, 'ansible_loop_var': 'item'})[0m
+
+PLAY RECAP *********************************************************************
+[33mlocalhost[0m                  : [32mok=3   [0m [33mchanged=2   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[34mINFO    [0m Pruning extra files from scenario ephemeral directory
+py310-ansible80: OK ✔ in 5 minutes 15.87 seconds
+py311-ansible29: skipped because could not find python interpreter with spec(s): py311
+py311-ansible29: SKIP ⚠ in 0.02 seconds
+py311-ansible210: skipped because could not find python interpreter with spec(s): py311
+py311-ansible210: SKIP ⚠ in 0.02 seconds
+py311-ansible30: skipped because could not find python interpreter with spec(s): py311
+py311-ansible30: SKIP ⚠ in 0.01 seconds
+py311-ansible40: skipped because could not find python interpreter with spec(s): py311
+py311-ansible40: SKIP ⚠ in 0.02 seconds
+py311-ansible50: skipped because could not find python interpreter with spec(s): py311
+py311-ansible50: SKIP ⚠ in 0.03 seconds
+py311-ansible60: skipped because could not find python interpreter with spec(s): py311
+py311-ansible60: SKIP ⚠ in 0.02 seconds
+py311-ansible70: skipped because could not find python interpreter with spec(s): py311
+py311-ansible70: SKIP ⚠ in 0.02 seconds
+py311-ansible80: skipped because could not find python interpreter with spec(s): py311
+[39m  py38-ansible29: SKIP (0.03 seconds)
+  py38-ansible210: SKIP (0.01 seconds)
+  py38-ansible30: SKIP (0.01 seconds)
+  py38-ansible40: SKIP (0.01 seconds)
+  py38-ansible50: SKIP (0.01 seconds)
+  py38-ansible60: SKIP (0.01 seconds)
+  py38-ansible70: SKIP (0.01 seconds)
+  py38-ansible80: SKIP (0.01 seconds)
+  py39-ansible29: SKIP (0.01 seconds)
+  py39-ansible210: SKIP (0.01 seconds)
+  py39-ansible30: SKIP (0.01 seconds)
+  py39-ansible40: SKIP (0.01 seconds)
+  py39-ansible50: SKIP (0.01 seconds)
+  py39-ansible60: SKIP (0.02 seconds)
+  py39-ansible70: SKIP (0.01 seconds)
+  py39-ansible80: SKIP (0.01 seconds)
+  py310-ansible29: FAIL code 1 (0.64=setup[0.04]+cmd[0.60] seconds)
+  py310-ansible210: FAIL code 1 (0.95=setup[0.01]+cmd[0.94] seconds)
+  py310-ansible30: FAIL code 1 (0.95=setup[0.01]+cmd[0.94] seconds)
+  py310-ansible40: FAIL code 1 (195.71 seconds)
+  py310-ansible50: OK (411.89=setup[0.03]+cmd[411.86] seconds)
+  py310-ansible60: OK (316.93=setup[0.01]+cmd[316.92] seconds)
+  py310-ansible70: OK (127.40=setup[0.01]+cmd[127.39] seconds)
+  py310-ansible80: OK (315.87=setup[0.01]+cmd[315.86] seconds)
+  py311-ansible29: SKIP (0.02 seconds)
+  py311-ansible210: SKIP (0.01 seconds)
+  py311-ansible30: SKIP (0.01 seconds)
+  py311-ansible40: SKIP (0.02 seconds)
+  py311-ansible50: SKIP (0.03 seconds)
+  py311-ansible60: SKIP (0.02 seconds)
+  py311-ansible70: SKIP (0.02 seconds)
+  py311-ansible80: SKIP (0.02 seconds)
+  evaluation failed :( (1370.79 seconds)
